@@ -3,7 +3,7 @@
     该项目包含了导航系统、语音系统、目标检测系统三个部分，涵盖语音唤醒、语音识别、语音合成、语音导航、目的地搜索、路径规划、车道分割、目标检测(车、车牌、违规车、路标等)、车牌识别等一整套快速解决方案！
 
 # 项目技术架构如下图
-![image](https://github.com/fandesfyf/Ar_project/blob/master/pic/%E6%95%B4%E4%BD%93%E6%A1%86%E6%9E%B6.png)
+![image](https://github.com/fandesfyf/Ar_project/blob/master/pic/%E6%95%B4%E4%BD%93%E6%A1%86%E6%9E%B61.jpg)
 
 # 目录结构
 ```c
