@@ -177,7 +177,7 @@ Project
 │          └─__pycache__
 │                  doinfer.cpython-37.pyc
 │                  
-└─Others
+└─Others //附带的一些脚本
         ali_server.py //阿里云后台后台部署脚本，接收违章数据
         AllPaths.json //写入把违章数据文件名写入json
         仿射变换test.py //仿射变换测试
@@ -194,4 +194,12 @@ Project
 # 实际画面
 
 ## 关于投影画面
-投影我们采用的是dlp2000充当树莓派的屏幕直接显示，然后在树莓派上运行窗口程序即产生投影Ar效果。有关，dlp模块与树莓派连接可以看这个
+投影我们采用的是dlp2000充当树莓派的屏幕直接显示，然后在树莓派上运行窗口程序即产生投影Ar效果。有关，dlp模块与树莓派连接可以看这个https://blog.csdn.net/qq_25160559/article/details/106062176
+使用树莓派4B需要改一下分辨率，不然会有画面倾斜等，参考https://e2e.ti.com/support/dlp/f/94/t/850392?DLPDLCR2000EVM-Resolution-problem-settings-with-i2c-and-raspberry-pi
+![image](https://github.com/fandesfyf/Ar_project/blob/master/pic/IMG_20200826_200301.jpg)
+## 投影效果
+![image](https://github.com/fandesfyf/Ar_project/blob/master/pic/IMG_20200823_205618.jpg)
+![image](https://github.com/fandesfyf/Ar_project/blob/master/pic/IMG_20200827_180415.jpg)
+![image](https://github.com/fandesfyf/Ar_project/blob/master/pic/IMG_20200831_162918.jpg)
+
+
