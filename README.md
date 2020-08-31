@@ -204,12 +204,12 @@ Project
 
 # 依赖
 paddlepaddle环境，有显卡的安装gpu版本比较好
-'''
+```
 opencv
 numpy
 pillow
 pyqt5
 PyQtWebEngine
 requests
-'''
+```
 multiprocess
