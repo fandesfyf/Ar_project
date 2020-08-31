@@ -211,5 +211,11 @@ pillow
 pyqt5
 PyQtWebEngine
 requests
-```
 multiprocess
+tencentcloud-sdk-python
+```
+## 各种api
+腾讯api：参考https://github.com/tencentyun/qcloud-documents/blob/master/%E5%BC%80%E5%8F%91%E8%80%85%E8%B5%84%E6%BA%90/%E4%BA%91API%20SDK/%E9%80%9A%E7%94%A8%E8%AF%AD%E8%A8%80%20SDK/Python%20SDK.md
+
+百度语音识别api：https://cloud.baidu.com/doc/SPEECH/s/Vk38lxily
+
