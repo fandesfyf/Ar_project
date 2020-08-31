@@ -202,4 +202,14 @@ Project
 ![image](https://github.com/fandesfyf/Ar_project/blob/master/pic/IMG_20200827_180415.jpg)
 ![image](https://github.com/fandesfyf/Ar_project/blob/master/pic/IMG_20200831_162918.jpg)
 
-
+# 依赖
+paddlepaddle环境，有显卡的安装gpu版本比较好
+'''
+opencv
+numpy
+pillow
+pyqt5
+PyQtWebEngine
+requests
+'''
+multiprocess
