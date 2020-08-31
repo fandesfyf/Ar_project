@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=0.4, user-scalable=no, width=640">
+    <title>位置经纬度 + 驾车规划路线</title>
+    <style type="text/css">
+    html,
+    body,
+    #container {
+      width: 100%;
+      height: 100%;
+    }
+    </style>
+    <style type="text/css">
+        #panel {
+            position: fixed;
+            background-color: white;
+            max-height: 90%;
+            overflow-y: auto;
+            top: -20px;
+            left: 0px;
+            width: 250px;
+            opacity: 0.0;
+        }
+        #panel .amap-call {
+            background-color: #009cf9;
+            border-top-left-radius: 4px;
+   	        border-top-right-radius: 4px;
+        }
+        #panel .amap-lib-driving {
+	        border-bottom-left-radius: 4px;
+   	        border-bottom-right-radius: 4px;
+            overflow: hidden;
+        }
+        html, body, #container {
+            height: 100%;
+            width: 100%;
+        }
+
+        .amap-icon img,
+        .amap-marker-content img{
+            width: 25px;
+            height: 34px;
+        }
+
+        .marker {
+            position: absolute;
+            top: -20px;
+            right: -118px;
+            color: #fff;
+            padding: 4px 10px;
+            box-shadow: 1px 1px 1px rgba(10, 10, 10, .2);
+            white-space: nowrap;
+            font-size: 12px;
+            background-color: #25A5F7;
+            border-radius: 3px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css" />
+    <script src="https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js"></script>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=e8ba4956dd4f477c2e9206eeebf1da8d&plugin=AMap.Driving"></script>
+</head>
+<body>
+<div id="container"></div>
+<div id="panel"></div>
+<script type="text/javascript">
+    //基本地图加载
+    var map = new AMap.Map("container", {
+        //resizeEnable: true,
+        center: [start_pos],//地图中心点
+        zoom: 17 //地图显示的缩放级别
+    });
+    //构造路线导航类
+    var driving = new AMap.Driving({
+        map: map,
+        panel: "panel"
+    });
+    var startpos=[start_pos]
+    // 根据起终点经纬度规划驾车导航路线end_pos113.370555,23.039919 start_pos113.931337,22.527091
+    driving.search(new AMap.LngLat(start_pos), new AMap.LngLat(end_pos), function(status, result) {
+        // result 即是对应的驾车导航信息，相关数据结构文档请参考  https://lbs.amap.com/api/javascript-api/reference/route-search#m_DrivingResult
+        if (status === 'complete') {
+            log.success('路线规划完成');
+            var p1,p2;
+            [p1,p2]=startpos;
+            changecenter(p1,p2,18);
+        } else {
+            log.error('获取驾车数据失败：' + result)
+        }
+    });
+    // 实例化点标记
+    nowmarker = new AMap.Marker({
+            icon: "https://a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-red.png",
+            position: [start_pos],//113.930201,22.526368
+            offset: new AMap.Pixel(-13, -30)
+        });
+    nowmarker.setMap(map);
+
+    function changecenter(p0,p1,zoom){
+        var position = [p0, p1];
+        map.setCenter(position);
+        nowmarker.setPosition([p0,p1]);
+        map.setZoom(zoom);
+        log.info(`当前层级:${zoom}`);
+    }
+</script>
+</body>
+</html>

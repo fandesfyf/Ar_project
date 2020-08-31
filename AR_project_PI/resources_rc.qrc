@@ -1,0 +1,10 @@
+<!DOCTYPE RCC>
+<RCC>
+<qresource>
+<file alias="black.png">black.png</file>
+<file alias="construction.png">construction.png</file>
+<file alias="graymkf.png">graymkf.png</file>
+<file alias="height_limit.png">height_limit.png</file>
+<file alias="mkf.png">mkf.png</file>
+</qresource>
+</RCC>
