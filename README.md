@@ -9,35 +9,35 @@
 ```c
 Project
 ├─AR_project_PI
-│  │  ARPImain.py //主程序
-│  │  ARui.py //界面类
+│  │  ARPImain.py //树莓派客户端主程序,用于调度树莓派端一切数据传输线程、界面更新、信号处理等，整合树莓派端的语音控制系统、导航系统、数据传输系统
+│  │  ARui.py //主界面类，调用webBrowser类实现内嵌浏览器功能，定义所有界面信号的槽函数
 │  │  Arrowclass.py //箭头类
 │  │  construction.png
-│  │  cv2test.py
-│  │  foundgreen.mp4
+│  │  cv2test.py//测试cv2获取摄像头数据最小例子
+│  │  foundgreen.mp4//
 │  │  foundred.mp4
 │  │  get_AndroidGps_server.py //从app获取输入的目的地gps信息
-│  │  GPStransformer.py 
+│  │  GPStransformer.py //各种gps坐标转换（没有用到）
 │  │  height_limit.png
 │  │  MPU6050filter.py
-│  │  MPU6065reader.py //陀螺仪传感器数据读取,需要自行矫正
-│  │  Navigation_system.py //导航系统类
-│  │  picameratest.py
-│  │  pi_clientcv.py //摄像头数据获取与处理
+│  │  MPU6065reader.py //陀螺仪传感器数据读取,需要自行测试矫正，安装角度不同初始参数不一样，矫正后可连续使用不漂移
+│  │  Navigation_system.py //导航系统类，包含路径规划、目的地搜索、位置更新等
+│  │  picameratest.py//使用picameratest测试摄像头最小例子
+│  │  pi_clientcv.py //摄像头数据获取与处理、传输类
 │  │  resources_rc.py //图标资源
-│  │  resources_rc.qrc
-│  │  webBrowser.py //内嵌浏览器
-│  │  webtest.py 
+│  │  resources_rc.qrc//资源标注文件，通过pyqrc转换为py文件被调用
+│  │  webBrowser.py //基于QWebEngine的内嵌浏览器，可实现大部分浏览器的功能，关键是他可以无头嵌入qt界面中，使用qwebchannel可以调用加载的js函数
+│  │  webtest.py //浏览器测试的最小例子
 │  │  
 │  ├─arrow //箭头图片文件夹
-│  │      forward.png
-│  │      forward2.png
-│  │      left.png
-│  │      right.png
+│  │      forward.png//向前箭头
+│  │      forward2.png//斜前方箭头
+│  │      left.png//向左箭头
+│  │      right.png//向右箭头
 │  │      
 │  ├─Navigationhtml //预设html文件夹
-│  │      initpage.html
-│  │      keywordsearch.html
+│  │      initpage.html//初始页
+│  │      keywordsearch.html//目的地搜索页面
 │  │      marker.png
 │  │      marker1.png
 │  │      navigating.html
@@ -48,22 +48,22 @@ Project
 │  │      
 │  └─voicecontrollermodel //语音系统文件夹
 │      │  chatbot.py //聊天机器人类,多轮对话线程
-│      │  demo.py
-│      │  lxyysbtest.py
+│      │  demo.py//snowboy的测试demo
+│      │  lxyysbtest.py//speech_recognition录音最小例子
 │      │  Makefile
 │      │  snowboy-detect-swig.cc
 │      │  snowboy-detect-swig.i
 │      │  snowboy-detect-swig.o
-│      │  snowboydecoder.py
-│      │  snowboydetect.py
-│      │  test.py
-│      │  text2voice.py 
+│      │  snowboydecoder.py//snowboy依赖文件
+│      │  snowboydetect.py//同上
+│      │  test.py//语音系统测试例子
+│      │  text2voice.py //文字转语音（旧版已遗弃，新的可以看voice_and_text.py文件）
 │      │  txpythonsdk.py //腾讯sdk改写的语音合成,需要补充自己的apikey
 │      │  voicecontroller.py //语音控制系统基类,汇总了语音唤醒,语音识别,语音合成类等
 │      │  voice_and_text.py //文字语音相互转换基类
 │      │  _snowboydetect.so
-│      │  关闭投影.pmdl
-│      │  打开投影.pmdl
+│      │  关闭投影.pmdl//snowboy语音唤醒模型文件
+│      │  打开投影.pmdl//snowboy语音唤醒模型文件
 │      │  蜂鸟.pmdl //语音唤醒模型文件
 │      │  
 │      ├─ihere_file //离线的语音应答词
@@ -180,15 +180,15 @@ Project
 └─Others //附带的一些脚本
         ali_server.py //阿里云后台后台部署脚本，接收违章数据
         AllPaths.json //写入把违章数据文件名写入json
-        仿射变换test.py //仿射变换测试
+        仿射变换test.py //仿射变换测试最小示例（已弃用，使用透视变换更好）
         初始化服务端的json路径.py //以下如名
         标注好的图片更改大小.py
         标注好的图片重命名.py
         生成文件名列表.py
-        移除不存在文件.py
-        透视变换test.py
-        随机分数据集.py
-        随机重命名.py
+        移除不存在文件.py//对标注数据的处理：根据json文件移除图片/根据图片移除json文件
+        透视变换test.py//透视变换最小测试示例
+        随机分数据集.py//数据分数据集
+        随机重命名.py//随机重命名图片用于打乱图片顺序
 ```
 所有关键类的注释都已经打上了，自己慢慢看...各个模块可以单独运行测试
 # 实际画面
