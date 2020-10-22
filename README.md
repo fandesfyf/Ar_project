@@ -219,3 +219,7 @@ tencentcloud-sdk-python
 
 百度语音识别api：https://cloud.baidu.com/doc/SPEECH/s/Vk38lxily
 
+## others
+PaddleDetection目标检测训练项目数据集及其配置文件(https://aistudio.baidu.com/aistudio/projectdetail/646813)
+PaddleSeg道路分割数据集及其配置文件(https://aistudio.baidu.com/aistudio/projectdetail/626071)
+
