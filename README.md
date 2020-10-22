@@ -221,5 +221,6 @@ tencentcloud-sdk-python
 
 ## others
 PaddleDetection目标检测训练项目数据集及其配置文件(https://aistudio.baidu.com/aistudio/projectdetail/646813)
+
 PaddleSeg道路分割数据集及其配置文件(https://aistudio.baidu.com/aistudio/projectdetail/626071)
 
