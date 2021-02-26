@@ -194,8 +194,8 @@ Project
 # 实际画面
 
 ## 关于投影画面
-投影我们采用的是dlp2000充当树莓派的屏幕直接显示，然后在树莓派上运行窗口程序即产生投影Ar效果。有关，dlp模块与树莓派连接可以看这个https://blog.csdn.net/qq_25160559/article/details/106062176
-使用树莓派4B需要改一下分辨率，不然会有画面倾斜等，参考https://e2e.ti.com/support/dlp/f/94/t/850392?DLPDLCR2000EVM-Resolution-problem-settings-with-i2c-and-raspberry-pi
+投影我们采用的是dlp2000充当树莓派的屏幕直接显示，然后在树莓派上运行窗口程序即产生投影Ar效果。有关，dlp模块与树莓派连接可以看[这个](https://blog.csdn.net/qq_25160559/article/details/106062176)
+使用树莓派4B需要改一下分辨率，不然会有画面倾斜等，[参考这个](https://e2e.ti.com/support/dlp/f/94/t/850392?DLPDLCR2000EVM-Resolution-problem-settings-with-i2c-and-raspberry-pi)
 ![image](https://github.com/fandesfyf/Ar_project/blob/master/pic/IMG_20200826_200301.jpg)
 ## 投影效果
 ![image](https://github.com/fandesfyf/Ar_project/blob/master/pic/IMG_20200823_205618.jpg)
@@ -215,12 +215,12 @@ multiprocess
 tencentcloud-sdk-python
 ```
 ## 各种api
-腾讯api：参考https://github.com/tencentyun/qcloud-documents/blob/master/%E5%BC%80%E5%8F%91%E8%80%85%E8%B5%84%E6%BA%90/%E4%BA%91API%20SDK/%E9%80%9A%E7%94%A8%E8%AF%AD%E8%A8%80%20SDK/Python%20SDK.md
+腾讯api：[参考](https://github.com/tencentyun/qcloud-documents/blob/master/%E5%BC%80%E5%8F%91%E8%80%85%E8%B5%84%E6%BA%90/%E4%BA%91API%20SDK/%E9%80%9A%E7%94%A8%E8%AF%AD%E8%A8%80%20SDK/Python%20SDK.md)
 
-百度语音识别api：https://cloud.baidu.com/doc/SPEECH/s/Vk38lxily
+[百度语音识别api](https://cloud.baidu.com/doc/SPEECH/s/Vk38lxily)
 
 ## others
-PaddleDetection目标检测训练项目数据集及其配置文件(https://aistudio.baidu.com/aistudio/projectdetail/646813)
+[PaddleDetection目标检测训练项目数据集及其配置文件](https://aistudio.baidu.com/aistudio/projectdetail/646813)
 
-PaddleSeg道路分割数据集及其配置文件(https://aistudio.baidu.com/aistudio/projectdetail/626071)
+[PaddleSeg道路分割数据集及其配置文件](https://aistudio.baidu.com/aistudio/projectdetail/626071)
 
